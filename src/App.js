@@ -1,4 +1,5 @@
 import React from "react";
+import chatBubbles from "./assets/chatBubbles.png"
 // Firebase deps
 import firebase from "firebase/app";
 import "firebase/auth";
@@ -148,7 +149,7 @@ function App() {
         className="flex-shrink-0 flex items-center justify-between px-4 sm:px-8 shadow-md"
         style={{ height: "var(--topbar-height)" }}
       >
-          <img src="./assets/chatBubbles.png" alt="Chat Bubbles" />
+          <img src={chatBubbles} alt="Chat Bubbles" width={45} height={45}/>
         
         <div className="flex items-center">
           {user ? (
