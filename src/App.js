@@ -55,14 +55,14 @@ function App() {
 
   const ThemeIcon = darkMode ? SunIcon : MoonIcon;
 
-  const signInWithGoogle = async () => {
+  const signInWithGoogle = () => {
     // Retrieve Google provider object
     const provider = new firebase.auth.GoogleAuthProvider();
     // Set language to the default browser preference
     firebase.auth().useDeviceLanguage();
     // Start sign in process
     try {
-      await firebase.auth().signInWithPopup(provider);
+      firebase.auth().signInWithPopup(provider);
     } catch (error) {
       console.log(error.message);
     }
