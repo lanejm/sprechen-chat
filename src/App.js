@@ -1,5 +1,5 @@
 import React from "react";
-import chatBubbles from "./assets/chatBubbles.png"
+import chatBubbles from "./assets/chatBubbles.png";
 // Firebase deps
 import firebase from "firebase/app";
 import "firebase/auth";
@@ -49,7 +49,7 @@ function App() {
   const { user, initializing } = useAuthState(firebase.auth());
   const [darkMode, setDarkMode] = useDarkMode();
 
-  const brandLogo = darkMode;
+  // const brandLogo = darkMode
   // ? `${process.env.PUBLIC_URL}/logo_white.svg`
   // : `${process.env.PUBLIC_URL}/logo.svg`;
 
@@ -91,9 +91,7 @@ function App() {
       <div className="flex items-center justify-center shadow-md h-full">
         <div className="flex flex-col items-center justify-center max-w-xl w-full mx-4 p-8 rounded-md shadow-card bg-white dark:bg-coolDark-600 transition-all">
           <img src={chatBubbles} alt="chat bubbles" width={45} height={45} />
-          <h2 className="mb-2 text-3xl flex items-center">
-            Sprechen
-          </h2>
+          <h2 className="mb-2 text-3xl flex items-center">Sprechen</h2>
           <p className="mb-8 text-lg text-center">Let's chat!</p>
           <button
             onClick={signInWithGoogle}
@@ -138,8 +136,8 @@ function App() {
         className="flex-shrink-0 flex items-center justify-between px-4 sm:px-8 shadow-md"
         style={{ height: "var(--topbar-height)" }}
       >
-          <img src={chatBubbles} alt="Chat Bubbles" width={45} height={45}/>
-        
+        <img src={chatBubbles} alt="Chat Bubbles" width={45} height={45} />
+
         <div className="flex items-center">
           {user ? (
             <button
@@ -149,10 +147,10 @@ function App() {
               Sign out
             </button>
           ) : null}
-          <ThemeIcon
+          {/* <ThemeIcon
             className="h-8 w-8 cursor-pointer"
             onClick={() => setDarkMode((prev) => !prev)}
-          />
+          /> */}
         </div>
       </header>
       <main
